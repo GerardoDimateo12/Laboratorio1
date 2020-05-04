@@ -8,6 +8,7 @@ namespace Laboratorio
     class Inicio
     {
         static Inventario In = new Inventario();
+        static Facturacion Fac = new Facturacion();
         public void Usuarios()
         {
             string usuario = "Gerardo", contra = "123", Usuario = "Antonio", Contra = "456", zy, yz, xw, wx;
@@ -38,11 +39,13 @@ namespace Laboratorio
                         if (a == 1)
                         {
                             Console.Clear();
+                            Console.WriteLine("\n--------INVENTARIO--------");
                             In.Inv();
                         }
                         if (a == 2)
                         {
-
+                            Console.Clear();
+                            Fac.Facturas();
                         }
                         if (a == 3)
                         {
@@ -77,7 +80,8 @@ namespace Laboratorio
                         }
                         if (a == 2)
                         {
-
+                            Console.Clear();
+                            
                         }
                         if (m == 3)
                         {

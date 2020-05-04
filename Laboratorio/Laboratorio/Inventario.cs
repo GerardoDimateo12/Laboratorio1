@@ -35,6 +35,7 @@ namespace Laboratorio
                 menu = char.Parse(Console.ReadLine());
             }
 
+            Console.Clear();
             Console.WriteLine("Desea Regresar al Inicio de Sesion? [-1-]\nDesea Cerrar Programa? [-2-]");
             l = int.Parse(Console.ReadLine());
             if (l == 1)
