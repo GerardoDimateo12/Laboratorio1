@@ -34,7 +34,7 @@ namespace Laboratorio
         }
         public string Pedir(string dato)
         {
-            Console.WriteLine("Ingrese " + dato + ":");
+            Console.WriteLine("Ingrese" + dato + ":");
             return (Console.ReadLine());
         }
         public void Factu(string Producto, string cantidad, string Precio)
@@ -45,7 +45,7 @@ namespace Laboratorio
         }
         public void F()
         {
-            Factur(Pedir("Nombre"), Pedir("NIT"), Pedir("Fecha"));
+            Factur(Pedir("Nombre"), Pedir("NIT"), Pedir("Fecha"), Pedir("Correlativo"));
             char menu = 's';
             while (menu != 'n')
             {
@@ -69,10 +69,10 @@ namespace Laboratorio
                 Console.Clear();
             }
         }
-        public void Factur(string Nombre, string NIT, string Fecha)
+        public void Factur(string Nombre, string NIT, string Fecha,string Numero)
         {
             escribir = File.AppendText(ruta1);
-            escribir.WriteLine("\nNombre: " + Nombre + "----" +"NIT: "+ NIT + "----------------" + "Fecha: " + Fecha+ "\n");
+            escribir.WriteLine("\nNombre: " + Nombre + "----" +"NIT: "+ NIT + "----------------" + "Fecha: " + Fecha + "  No. "+ Numero);
             escribir.Close();
         }
 

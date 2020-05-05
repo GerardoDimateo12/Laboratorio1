@@ -9,19 +9,22 @@ namespace Laboratorio
     {
         static Inicio o = new Inicio();
         static string ruta = "Inventario.txt";
+        static FileStream archivo;
+        static StreamReader leer;
         static StreamWriter escribir;
         static int l;
-        public string Pedir(string dato)
-        {
-            Console.WriteLine("Ingrese" + dato + ":");
-            return (Console.ReadLine());
-        }
         public void Inven(string Producto, string cantidad, string Precio)
         {
             escribir = File.AppendText(ruta);
             escribir.WriteLine(Producto + " ---- " + cantidad + " ---- " + "Q." + Precio);
             escribir.Close();
         }
+        public string Pedir(string dato)
+        {
+            Console.WriteLine("Ingrese" + dato + ":");
+            return (Console.ReadLine());
+        }
+
         public void I()
         {
             char menu = 's';
