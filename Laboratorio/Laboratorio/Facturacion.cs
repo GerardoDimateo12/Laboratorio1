@@ -12,25 +12,12 @@ namespace Laboratorio
         static string ruta1 = "Facturacion.txt";
         static StreamWriter escribir;
         static int f;
-        
-        public void Facturas()
+    
+        public void Factur(string Nombre, string NIT, string Fecha, string Numero)
         {
-            Console.ReadLine();
-            TextReader Leer;
-            Leer = new StreamReader(ruta1);
-            Console.WriteLine(Leer.ReadToEnd());
-
-            Console.WriteLine("Desea Regresar al Inicio de Sesion? [-1-]\nDesea Cerrar Programa? [-2-]");
-            f = int.Parse(Console.ReadLine());
-            if (f == 1)
-            {
-                Console.Clear();
-                o.Usuarios();
-            }
-            if (f == 2)
-            {
-                Console.Clear();
-            }
+            escribir = File.AppendText(ruta1);
+            escribir.WriteLine("\nNombre: " + Nombre + "----" + "NIT: " + NIT + "----------------" + "Fecha: " + Fecha + "  No. " + Numero);
+            escribir.Close();
         }
         public string Pedir(string dato)
         {
@@ -69,13 +56,25 @@ namespace Laboratorio
                 Console.Clear();
             }
         }
-        public void Factur(string Nombre, string NIT, string Fecha,string Numero)
+        public void Facturas()
         {
-            escribir = File.AppendText(ruta1);
-            escribir.WriteLine("\nNombre: " + Nombre + "----" +"NIT: "+ NIT + "----------------" + "Fecha: " + Fecha + "  No. "+ Numero);
-            escribir.Close();
-        }
+            Console.ReadLine();
+            TextReader Leer;
+            Leer = new StreamReader(ruta1);
+            Console.WriteLine(Leer.ReadToEnd());
 
+            Console.WriteLine("Desea Regresar al Inicio de Sesion? [-1-]\nDesea Cerrar Programa? [-2-]");
+            f = int.Parse(Console.ReadLine());
+            if (f == 1)
+            {
+                Console.Clear();
+                o.Usuarios();
+            }
+            if (f == 2)
+            {
+                Console.Clear();
+            }
+        }
     }
 }
 

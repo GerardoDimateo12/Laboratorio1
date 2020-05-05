@@ -24,7 +24,7 @@ namespace Laboratorio
             {
                 escribir = File.AppendText(ruta2);
                 escribir.WriteLine("Nombre del Nuevo: " + puesto + "\n Contraseña: " + a);
-                escribir.WriteLine("Administrador");
+                escribir.WriteLine("---Administrador---");
                 o.usua1 = puesto;
                 o.contra1 = a;
                 escribir.Close();
@@ -33,7 +33,7 @@ namespace Laboratorio
             {
                 escribir = File.AppendText(ruta2);
                 escribir.WriteLine("Nombre del Nuevo usuario: " + puesto + "\n Contraseña: " + a);
-                escribir.WriteLine("Trabajador");
+                escribir.WriteLine("---Trabajador---");
                 o.usua2 = puesto;
                 o.contra2 = a;
                 escribir.Close();
