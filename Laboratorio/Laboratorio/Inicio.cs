@@ -9,11 +9,11 @@ namespace Laboratorio
     {
         static Inventario In = new Inventario();
         static Facturacion Fac = new Facturacion();
+        static Usuarios Us = new Usuarios();
+        public string usua1 = "Gerardo", contra1 = "123", usua2 = "Antonio", contra2 = "456", zy, yz, xw, wx;
         public void Usuarios()
-        {
-            string usuario = "Gerardo", contra = "123", Usuario = "Antonio", Contra = "456", zy, yz, xw, wx;
+        { 
             Console.WriteLine("                    _________________________\n                           Bienvenidos\n                    --------LOS PATOS--------\n                    _________________________");
-
             Console.WriteLine("\n                       Que Puesto Tienes: \n                        1. Administrador\n                        2. Trabajador\n                        3. Salir\n");
             int m = int.Parse(Console.ReadLine());
 
@@ -24,12 +24,12 @@ namespace Laboratorio
                 Console.WriteLine("Ingrese Nombre: ");
                 zy = Console.ReadLine();
 
-                if (usuario == zy)
+                if (usua1 == zy)
                 {
                     Console.WriteLine("Ingrese Contraseña: ");
                     yz = Console.ReadLine();
 
-                    if (contra == yz)
+                    if (contra1 == yz)
                     {
                         Console.Clear();
                         Console.WriteLine("                    _________________________\n                           Bienvenidos\n                    --------LOS PATOS--------\n                    _________________________");
@@ -49,7 +49,20 @@ namespace Laboratorio
                         }
                         if (a == 3)
                         {
-
+                            Console.Clear();
+                            Console.WriteLine("Que Quiere hacer?\n 1. Crear Usuarios\n 2. Ver Usuarios");
+                            int h = int.Parse(Console.ReadLine());
+                            if (h == 1)
+                            {
+                                Console.Clear();
+                                Us.Usua();
+                            }
+                            if (h == 2)
+                            {
+                                Console.Clear();
+                                Console.WriteLine("\n--------USUARIOS--------");
+                                Us.Usuar();
+                            }
                         }
 
                     }
@@ -62,11 +75,11 @@ namespace Laboratorio
                 Console.WriteLine("Ingrese Nombre: ");
                 xw = Console.ReadLine();
            
-                if (Usuario == xw)
+                if (usua2 == xw)
                 {
                     Console.WriteLine("Ingrese Contraseña: ");
                     wx = Console.ReadLine();
-                    if (Contra == wx)
+                    if (contra2 == wx)
                     {
                         Console.Clear();
                         Console.WriteLine("                    _________________________\n                           Bienvenidos\n                    --------LOS PATOS--------\n                    _________________________");
@@ -85,7 +98,7 @@ namespace Laboratorio
                         }
                         if (m == 3)
                         {
-                            Console.Clear();
+                            
                         }
 
                     }
