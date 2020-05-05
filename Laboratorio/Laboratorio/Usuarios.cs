@@ -9,8 +9,6 @@ namespace Laboratorio
     {
         static Inicio o = new Inicio();
         static string ruta2 = "Usuarios.txt";
-        static FileStream archivo;
-        static StreamReader leer;
         static StreamWriter escribir;
         public int menu;
         

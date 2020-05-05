@@ -45,6 +45,7 @@ namespace Laboratorio
                         if (a == 2)
                         {
                             Console.Clear();
+                            Console.WriteLine("\n--------FACTURAS--------");
                             Fac.Facturas();
                         }
                         if (a == 3)
@@ -55,6 +56,7 @@ namespace Laboratorio
                             if (h == 1)
                             {
                                 Console.Clear();
+                                Console.WriteLine("\n--------CREAR-USUARIOS--------\n");
                                 Us.Usua();
                             }
                             if (h == 2)
@@ -94,13 +96,12 @@ namespace Laboratorio
                         if (a == 2)
                         {
                             Console.Clear();
-                            
+                            Fac.F();
                         }
                         if (m == 3)
                         {
-                            
+                            Console.Clear();
                         }
-
                     }
                 }
 
